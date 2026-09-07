@@ -1,0 +1,544 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500;600&display=swap");
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.site-credits,
+.site-credits * {
+    box-sizing: border-box;
+}
+
+.site-credits {
+    position: relative;
+
+    width: 100%;
+    height: 100dvh;
+
+    overflow: hidden;
+
+    background: #14110f;
+
+    color: #f5efe6;
+
+    font-family: "Manrope", sans-serif;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.credits-background {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 0;
+
+    overflow: hidden;
+}
+
+.credits-background img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transform: scale(1.04);
+
+    filter: saturate(0.7) contrast(1.05);
+}
+
+
+.credits-darkness {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(to bottom,
+            rgba(10, 8, 7, 0.72),
+            rgba(10, 8, 7, 0.55) 30%,
+            rgba(10, 8, 7, 0.72) 70%,
+            rgba(10, 8, 7, 0.94));
+}
+
+
+.credits-vignette {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(ellipse at center,
+            transparent 25%,
+            rgba(0, 0, 0, 0.48) 100%);
+}
+
+
+/* =========================================================
+   FADE
+========================================================= */
+
+.credits-top-fade {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 24vh;
+
+    z-index: 10;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(to bottom,
+            rgba(12, 10, 8, 0.95),
+            rgba(12, 10, 8, 0));
+}
+
+
+/* =========================================================
+   SCROLL CONTENT
+========================================================= */
+
+.credits-scroll {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    padding-top: 80vh;
+
+    will-change: transform;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   CREDIT BLOCK
+========================================================= */
+
+.credits-block {
+    width: min(900px, 90vw);
+
+    margin: 0 auto;
+
+    min-height: 90vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.credits-label {
+    display: block;
+
+    margin-bottom: 28px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.35em;
+
+    color: rgba(245, 239, 230, 0.55);
+}
+
+
+.credits-block h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(4rem, 9vw, 9rem);
+
+    line-height: 0.82;
+
+    font-weight: 300;
+
+    letter-spacing: -0.04em;
+
+    color: #f5efe6;
+}
+
+
+.credits-block p {
+    margin-top: 42px;
+
+    max-width: 520px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(1.2rem, 2vw, 1.65rem);
+
+    line-height: 1.4;
+
+    font-weight: 300;
+
+    color: rgba(245, 239, 230, 0.72);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.credits-intro {
+    min-height: 100vh;
+}
+
+
+.credits-small {
+    margin-bottom: 32px;
+
+    font-size: 11px;
+
+    letter-spacing: 0.45em;
+
+    color: #d4b07a;
+}
+
+
+.credits-intro h1 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(5rem, 12vw, 12rem);
+
+    font-weight: 300;
+
+    line-height: 0.75;
+
+    letter-spacing: -0.055em;
+}
+
+
+.credits-intro h1 em {
+    color: #d4b07a;
+
+    font-style: italic;
+}
+
+
+.credits-line {
+    width: 70px;
+
+    height: 1px;
+
+    margin: 55px auto 0;
+
+    background: rgba(212, 176, 122, 0.7);
+}
+
+
+.credits-intro p {
+    margin-top: 32px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   NOTE
+========================================================= */
+
+.credits-note {
+    min-height: 100vh;
+}
+
+
+.credits-note p {
+    max-width: 620px;
+
+    margin-top: 28px;
+
+    font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.credits-final {
+    min-height: 70vh;
+}
+
+
+.credits-symbol {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100px;
+    height: 100px;
+
+    margin-bottom: 45px;
+
+    background: #d4b07a;
+
+    color: #25201c;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 4rem;
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+
+.credits-final h2 {
+    font-size: clamp(4rem, 10vw, 10rem);
+}
+
+
+.credits-final p {
+    margin-top: 25px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 0.35em;
+
+    color: #d4b07a;
+}
+
+
+.credits-final-line {
+    width: 80px;
+
+    height: 1px;
+
+    margin: 45px auto;
+
+    background: rgba(212, 176, 122, 0.65);
+}
+
+
+/* =========================================================
+   RETURN BUTTON
+========================================================= */
+
+.credits-return {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 15px 22px;
+
+    border: 1px solid rgba(245, 239, 230, 0.3);
+
+    background: transparent;
+
+    color: #f5efe6;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 0.18em;
+
+    cursor: pointer;
+
+    transition:
+        background 0.4s ease,
+        color 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+.credits-return span {
+    font-size: 16px;
+
+    transition: transform 0.4s ease;
+}
+
+
+.credits-return:hover {
+    background: #d4b07a;
+
+    border-color: #d4b07a;
+
+    color: #25201c;
+}
+
+
+.credits-return:hover span {
+    transform: translate(4px, -4px);
+}
+
+
+/* =========================================================
+   END SPACE
+========================================================= */
+
+
+/* =========================================================
+   FIXED UI
+========================================================= */
+
+.credits-ui {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 50;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 28px 32px;
+
+    pointer-events: none;
+}
+
+
+.credits-ui-brand {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 22px;
+
+    letter-spacing: 0.08em;
+}
+
+
+.credits-close {
+    pointer-events: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #f5efe6;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 0.25em;
+
+    cursor: pointer;
+}
+
+
+.credits-close span {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 25px;
+    height: 25px;
+
+    border: 1px solid rgba(245, 239, 230, 0.35);
+
+    font-size: 18px;
+
+    line-height: 1;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.credits-close:hover span {
+    background: #d4b07a;
+
+    color: #25201c;
+
+    border-color: #d4b07a;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .credits-ui {
+        padding: 20px;
+    }
+
+
+    .credits-block {
+        width: 88vw;
+
+        min-height: 100vh;
+    }
+
+
+    .credits-block h2 {
+        font-size: clamp(3.5rem, 17vw, 7rem);
+    }
+
+
+    .credits-intro h1 {
+        font-size: clamp(4rem, 19vw, 8rem);
+    }
+
+
+    .credits-block p {
+        max-width: 85vw;
+
+        font-size: 1.15rem;
+    }
+
+
+    .credits-label {
+        font-size: 8px;
+
+        letter-spacing: 0.28em;
+    }
+
+
+    .credits-symbol {
+        width: 75px;
+        height: 75px;
+
+        font-size: 3rem;
+    }
+
+}

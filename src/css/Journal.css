@@ -1,0 +1,457 @@
+.journal-section {
+    width: 100%;
+    min-height: 100dvh;
+
+    padding: 100px 5vw 70px;
+
+    background: #f5efe6;
+    color: #14110f;
+
+    overflow: hidden;
+}
+
+
+/* --------------------------------
+   HEADER
+-------------------------------- */
+
+.journal-header {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    padding-bottom: 55px;
+
+    border-bottom: 1px solid rgba(20, 17, 15, 0.2);
+}
+
+
+.journal-number {
+    display: block;
+
+    margin-bottom: 40px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 0.65rem;
+    font-weight: 500;
+
+    letter-spacing: 0.17em;
+
+    text-transform: uppercase;
+
+    opacity: 0.55;
+}
+
+
+.journal-heading h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(4.5rem, 8vw, 9rem);
+
+    font-weight: 400;
+
+    line-height: 0.78;
+
+    letter-spacing: -0.055em;
+}
+
+
+.journal-heading h2 em {
+    color: #8c7657;
+
+    font-weight: 400;
+}
+
+
+.journal-intro {
+    margin: 0;
+
+    padding-bottom: 8px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 0.75rem;
+
+    line-height: 1.7;
+
+    color: rgba(20, 17, 15, 0.55);
+
+    text-align: right;
+}
+
+
+/* --------------------------------
+   GRID
+-------------------------------- */
+
+.journal-grid {
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    grid-template-rows: repeat(2, auto);
+
+    gap: 2px;
+
+    margin-top: 55px;
+}
+
+
+/* --------------------------------
+   CARD
+-------------------------------- */
+
+.journal-card {
+    position: relative;
+
+    min-height: 430px;
+
+    padding: 25px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    background: #e9dfd2;
+}
+
+
+.journal-card.featured {
+    grid-row: span 2;
+
+    min-height: 865px;
+}
+
+
+/* --------------------------------
+   IMAGE
+-------------------------------- */
+
+.journal-image {
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+}
+
+
+.journal-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transform: scale(1);
+
+    transition:
+        transform 1s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+
+.journal-card:hover .journal-image img {
+    transform: scale(1.06);
+}
+
+
+.journal-image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.45),
+            transparent 45%,
+            rgba(0, 0, 0, 0.75));
+}
+
+
+/* --------------------------------
+   META
+-------------------------------- */
+
+.journal-meta {
+    position: absolute;
+
+    top: 25px;
+    left: 25px;
+    right: 25px;
+
+    z-index: 3;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    color: white;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 0.58rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+}
+
+
+.journal-meta span:nth-child(2) {
+    opacity: 0.6;
+}
+
+
+.journal-arrow {
+    width: 34px;
+    height: 34px;
+
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    border-radius: 50%;
+
+    opacity: 0;
+
+    transform: translateY(8px);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+.journal-card:hover .journal-arrow {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* --------------------------------
+   CONTENT
+-------------------------------- */
+
+.journal-content {
+    position: absolute;
+
+    left: 25px;
+    right: 25px;
+    bottom: 28px;
+
+    z-index: 3;
+
+    color: white;
+}
+
+
+.journal-content h3 {
+    max-width: 800px;
+
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(2rem, 3.5vw, 4.5rem);
+
+    font-weight: 400;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.03em;
+}
+
+
+.journal-card:not(.featured) .journal-content h3 {
+    font-size: clamp(1.8rem, 2.4vw, 2.8rem);
+}
+
+
+.journal-content p {
+    max-width: 500px;
+
+    margin: 18px 0 0;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 0.7rem;
+
+    line-height: 1.6;
+
+    color: rgba(255, 255, 255, 0.68);
+}
+
+
+.journal-read {
+    display: inline-block;
+
+    margin-top: 22px;
+
+    padding-bottom: 5px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 0.58rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+}
+
+
+/* --------------------------------
+   FOOTER
+-------------------------------- */
+
+.journal-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 30px;
+
+    padding: 20px 5px 0;
+
+    border-top: 1px solid rgba(20, 17, 15, 0.2);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 0.58rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.14em;
+}
+
+
+.journal-footer span:last-child {
+    cursor: pointer;
+}
+
+
+/* --------------------------------
+   TABLET
+-------------------------------- */
+
+@media (max-width: 900px) {
+
+    .journal-section {
+        padding: 80px 25px 60px;
+    }
+
+    .journal-header {
+        display: block;
+    }
+
+    .journal-intro {
+        margin-top: 30px;
+
+        text-align: left;
+    }
+
+    .journal-grid {
+        grid-template-columns: 1fr;
+
+        grid-template-rows: auto;
+
+        gap: 6px;
+    }
+
+    .journal-card,
+    .journal-card.featured {
+        grid-row: auto;
+
+        min-height: 600px;
+    }
+
+}
+
+
+/* --------------------------------
+   MOBILE
+-------------------------------- */
+
+@media (max-width: 600px) {
+
+    .journal-section {
+        padding: 65px 15px 50px;
+    }
+
+    .journal-number {
+        margin-bottom: 30px;
+    }
+
+    .journal-heading h2 {
+        font-size: 4.8rem;
+    }
+
+    .journal-grid {
+        margin-top: 40px;
+    }
+
+    .journal-card,
+    .journal-card.featured {
+        min-height: 560px;
+
+        padding: 18px;
+    }
+
+    .journal-meta {
+        top: 18px;
+        left: 18px;
+        right: 18px;
+    }
+
+    .journal-content {
+        left: 18px;
+        right: 18px;
+        bottom: 22px;
+    }
+
+    .journal-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .journal-card:not(.featured) .journal-content h3 {
+        font-size: 2.1rem;
+    }
+
+    .journal-content p {
+        font-size: 0.68rem;
+    }
+
+    .journal-arrow {
+        opacity: 1;
+        transform: none;
+    }
+
+    .journal-footer {
+        display: block;
+
+        line-height: 2;
+    }
+
+    .journal-footer span {
+        display: block;
+    }
+
+}

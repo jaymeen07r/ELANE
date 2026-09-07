@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
+
+.navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 98%;
+
+  height: 70px;
+
+  padding: 0 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 1000;
+  /* border: 2px solid white; */
+  margin: 1rem 1%;
+  pointer-events: none;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.navbar-brand,
+.explore-btn {
+  pointer-events: auto;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  text-decoration: none;
+}
+
+.navbar-brand img {
+  width: 46px;
+  height: 46px;
+
+  object-fit: contain;
+}
+
+.navbar-brand span {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 2rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.02em;
+
+  color: #f5efe6;
+
+  transition: 0.3s ease;
+}
+
+.navbar-brand:hover span {
+  color: #d4b07a;
+}
+
+.explore-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+
+  color: #f5efe6;
+
+  padding: 0;
+
+  transition: 0.3s ease;
+}
+
+
+.explore-btn p {
+  margin: 0;
+  font-size: 1.7rem;
+  color: #f5efe6;
+  letter-spacing: 0.03em;
+}
+
+.explore-btn:hover {
+  transform: translateX(-4px);
+}
+
+
+.explore-btn:hover p {
+  color: #d4b07a;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 24px;
+    height: 80px;
+  }
+
+  .navbar-brand span {
+    font-size: 1.6rem;
+  }
+
+  .explore-btn p {
+    display: none;
+  }
+}

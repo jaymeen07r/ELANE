@@ -1,0 +1,353 @@
+.experience-section {
+    position: relative;
+
+    width: 100%;
+    height: 100dvh;
+
+    min-height: 700px;
+
+    overflow: hidden;
+
+    background: #14110f;
+
+    color: #f5efe6;
+}
+
+
+/* --------------------------------
+   VIDEO
+-------------------------------- */
+
+.experience-video {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transform: scale(1.02);
+}
+
+
+/* --------------------------------
+   CINEMATIC OVERLAY
+-------------------------------- */
+
+.experience-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.15) 35%,
+            rgba(0, 0, 0, 0.3) 60%,
+            rgba(0, 0, 0, 0.75));
+
+    z-index: 1;
+}
+
+
+/* --------------------------------
+   TOP
+-------------------------------- */
+
+.experience-top {
+    position: absolute;
+
+    top: 30px;
+    left: 35px;
+    right: 35px;
+
+    z-index: 5;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 22px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 0.63rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+.experience-top span:first-child {
+    opacity: 0.65;
+}
+
+
+.experience-top span:last-child {
+    opacity: 0.45;
+}
+
+
+/* --------------------------------
+   CENTER
+-------------------------------- */
+
+.experience-center {
+    position: absolute;
+
+    z-index: 5;
+
+    top: 50%;
+    left: 50%;
+
+    width: min(900px, 90vw);
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+
+
+.experience-eyebrow {
+    display: block;
+
+    margin-bottom: 25px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 0.62rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.25em;
+
+    text-transform: uppercase;
+
+    opacity: 0.7;
+}
+
+
+.experience-center h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(4.5rem, 9vw, 10rem);
+
+    font-weight: 400;
+
+    line-height: 0.78;
+
+    letter-spacing: -0.055em;
+}
+
+
+.experience-center h2 em {
+    color: #d4b07a;
+
+    font-weight: 400;
+}
+
+
+.experience-center p {
+    width: min(420px, 90%);
+
+    margin: 35px auto 0;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 0.78rem;
+
+    line-height: 1.7;
+
+    color: rgba(245, 239, 230, 0.65);
+}
+
+
+/* --------------------------------
+   STEPS
+-------------------------------- */
+
+.experience-steps {
+    position: absolute;
+
+    z-index: 5;
+
+    left: 35px;
+    right: 35px;
+    bottom: 30px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+
+.experience-step {
+    display: flex;
+
+    gap: 15px;
+
+    min-height: 95px;
+
+    padding: 20px 25px 0 0;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+.experience-step:not(:first-child) {
+    padding-left: 25px;
+}
+
+
+.experience-step:last-child {
+    border-right: none;
+}
+
+
+.step-number {
+    font-family: "Manrope", sans-serif;
+
+    font-size: 0.55rem;
+
+    letter-spacing: 0.12em;
+
+    opacity: 0.45;
+}
+
+
+.step-content h3 {
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+
+.step-content p {
+    margin: 8px 0 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1rem;
+
+    color: rgba(245, 239, 230, 0.6);
+}
+
+
+/* --------------------------------
+   TABLET
+-------------------------------- */
+
+@media (max-width: 900px) {
+
+    .experience-section {
+        min-height: 800px;
+    }
+
+    .experience-center h2 {
+        font-size: clamp(4rem, 12vw, 7rem);
+    }
+
+    .experience-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .experience-step {
+        min-height: 80px;
+    }
+
+}
+
+
+/* --------------------------------
+   MOBILE
+-------------------------------- */
+
+@media (max-width: 600px) {
+
+    .experience-section {
+        height: auto;
+
+        min-height: 900px;
+    }
+
+    .experience-video {
+        object-position: center;
+    }
+
+    .experience-top {
+        top: 20px;
+        left: 18px;
+        right: 18px;
+
+        padding-bottom: 16px;
+    }
+
+    .experience-top span:last-child {
+        display: none;
+    }
+
+    .experience-center {
+        top: 43%;
+
+        width: calc(100% - 30px);
+    }
+
+    .experience-center h2 {
+        font-size: clamp(4rem, 17vw, 6rem);
+    }
+
+    .experience-center p {
+        margin-top: 25px;
+
+        font-size: 0.72rem;
+    }
+
+    .experience-steps {
+        left: 18px;
+        right: 18px;
+        bottom: 20px;
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .experience-step {
+        min-height: 85px;
+
+        padding: 15px 10px 15px 0;
+    }
+
+    .experience-step:not(:first-child) {
+        padding-left: 15px;
+    }
+
+    .step-content h3 {
+        font-size: 0.58rem;
+    }
+
+    .step-content p {
+        font-size: 0.9rem;
+    }
+
+}

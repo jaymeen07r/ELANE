@@ -1,0 +1,247 @@
+.time-transition {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: #14110f;
+}
+
+/* photos */
+
+.photo {
+  position: absolute;
+
+  width: 340px;
+  padding: 14px 14px 38px 14px;
+
+  border-radius: 3px;
+
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.15),
+    0 20px 60px rgba(0, 0, 0, 0.35);
+
+  opacity: 0;
+
+  overflow: hidden;
+
+  transform-origin: center center;
+
+  z-index: 20;
+}
+
+.photo::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image: radial-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+
+  background-size: 4px 4px;
+
+  mix-blend-mode: multiply;
+
+  pointer-events: none;
+}
+
+.photo::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  box-shadow:
+    inset 0 0 20px rgba(0, 0, 0, 0.08),
+    inset 0 0 60px rgba(130, 90, 40, 0.08);
+
+  pointer-events: none;
+}
+.photo img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+
+  display: block;
+
+  filter: contrast(0.95) saturate(0.9);
+}
+
+.paper-edge {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  mix-blend-mode: multiply;
+
+  opacity: 1;
+
+  pointer-events: none;
+}
+
+.photo::before {
+  content: "";
+
+  position: absolute;
+
+  top: -8px;
+  right: -8px;
+
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.08);
+
+  filter: blur(10px);
+
+  opacity: 0.3;
+}
+/* positions */
+
+.photo-1 {
+  left: 10%;
+  top: 18%;
+}
+
+.photo-2 {
+  right: 12%;
+  top: 12%;
+}
+
+.photo-3 {
+  left: 22%;
+  bottom: 12%;
+}
+
+.photo-4 {
+  right: 18%;
+  bottom: 18%;
+}
+
+.photo-5 {
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+/* glow */
+
+.transition-glow {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0;
+
+  background: radial-gradient(
+    circle,
+    rgba(212, 176, 122, 0.85),
+    transparent 60%
+  );
+
+  z-index: 50;
+}
+
+.ambient-light {
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(212, 176, 122, 0.08),
+    transparent 70%
+  );
+}
+
+.photo {
+  will-change: transform, opacity;
+  z-index: 20;
+}
+
+.transition-glow {
+  z-index: 50;
+}
+
+.transition-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+
+  opacity: 0;
+
+  background: radial-gradient(
+    circle,
+    rgba(212, 176, 122, 1) 0%,
+    rgba(212, 176, 122, 0.6) 20%,
+    rgba(212, 176, 122, 0) 70%
+  );
+
+  pointer-events: none;
+}
+
+.bg-old,
+.bg-modern {
+  position: absolute;
+  inset: 0;
+}
+
+.bg-old {
+  background: #14110f;
+
+  z-index: 1;
+}
+
+.bg-modern {
+  background: #f7f4ee;
+
+  opacity: 0;
+
+  z-index: 2;
+}
+
+.old-atmosphere {
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(212, 176, 122, 0.18),
+    transparent 70%
+  );
+
+  z-index: 3;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-bg-1 {
+  opacity: 1;
+}
+
+.hero-bg-2 {
+  opacity: 0;
+}
+
+.hero-bg-2 {
+  opacity: 0;
+  transform: scale(1.15);
+
+  filter: brightness(1.15) contrast(1.05);
+
+  z-index: 2;
+}

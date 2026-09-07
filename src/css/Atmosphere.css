@@ -1,0 +1,331 @@
+/* =========================================
+   THE ATMOSPHERE
+========================================= */
+
+.atmosphere {
+  position: relative;
+
+  width: 100%;
+  height: 100dvh;
+
+  min-height: 100dvh;
+
+  overflow: hidden;
+
+  background: #0d0c0b;
+
+  color: #f5efe6;
+
+  isolation: isolate;
+  padding: 20px 30px 20px;
+}
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.atmosphere-background {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  z-index: 0;
+}
+
+.atmosphere-background img {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  opacity: 0;
+
+  transform: scale(1.18);
+
+  filter: saturate(0.65) contrast(1.08);
+
+  will-change: transform, opacity;
+
+  user-select: none;
+
+  -webkit-user-drag: none;
+}
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.atmosphere-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(
+    circle at 50% 45%,
+    rgba(20, 17, 14, 0.08) 0%,
+    rgba(20, 17, 14, 0.35) 40%,
+    rgba(10, 9, 8, 0.92) 100%
+  );
+
+  opacity: 1;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+.atmosphere-overlay::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    transparent 30%,
+    transparent 65%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.atmosphere-number {
+    font-family: "Manrope", sans-serif;
+    font-size: 2.7rem;
+    font-weight: 500;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    opacity: 0.65;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.atmosphere-content {
+  position: absolute;
+
+  left: 50%;
+
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: min(900px, 90vw);
+
+  text-align: center;
+
+  z-index: 5;
+}
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.atmosphere-eyebrow {
+  display: block;
+  margin-bottom: 28px;
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(245, 239, 230, 0.6);
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.atmosphere-title {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(2rem, 5vw, 6rem);
+
+  font-weight: 300;
+
+  line-height: 0.78;
+
+  letter-spacing: -0.065em;
+
+  color: #f5efe6;
+}
+
+.atmosphere-title em {
+  font-style: italic;
+  font-weight: 300;
+  color: #d4b07a;
+}
+
+/* =========================================
+   TEXT
+========================================= */
+
+.atmosphere-text {
+  width: 900px;
+  margin: 42px auto 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 2rem;
+  line-height: 1.75;
+  font-weight: 400;
+  color: rgba(245, 239, 230, 0.55);
+}
+
+/* =========================================
+   ATMOSPHERIC WORDS
+========================================= */
+
+.atmosphere-words {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.atmosphere-word {
+  position: absolute;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(4rem, 8vw, 10rem);
+  font-weight: 300;
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  color: rgba(245, 239, 230, 0.075);
+  white-space: nowrap;
+  will-change: transform, opacity;
+}
+
+.word-one {
+  left: -1vw;
+
+  top: 13vh;
+}
+
+.word-two {
+  right: -2vw;
+
+  top: 39vh;
+
+  font-style: italic;
+}
+
+.word-three {
+  left: 4vw;
+
+  bottom: 8vh;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.atmosphere-footer {
+  position: absolute;
+
+  left: 32px;
+  right: 32px;
+
+  bottom: 28px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  z-index: 10;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+
+  color: rgba(245, 239, 230, 0.35);
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .atmosphere-header {
+    padding: 20px;
+
+    font-size: 8px;
+  }
+
+  .atmosphere-content {
+    width: calc(100% - 40px);
+  }
+
+  .atmosphere-eyebrow {
+    margin-bottom: 22px;
+
+    font-size: 8px;
+  }
+
+  .atmosphere-title {
+    font-size: clamp(4rem, 16vw, 7rem);
+
+    line-height: 0.82;
+  }
+
+  .atmosphere-text {
+    width: 230px;
+
+    margin-top: 28px;
+
+    font-size: 10px;
+  }
+
+  .atmosphere-word {
+    font-size: 20vw;
+  }
+
+  .word-one {
+    left: -5vw;
+
+    top: 18vh;
+  }
+
+  .word-two {
+    right: -8vw;
+
+    top: 43vh;
+  }
+
+  .word-three {
+    left: -5vw;
+
+    bottom: 13vh;
+  }
+
+  .atmosphere-footer {
+    left: 20px;
+    right: 20px;
+
+    bottom: 20px;
+  }
+}

@@ -1,0 +1,426 @@
+/* =========================================
+   THE OBJECT
+========================================= */
+
+.object-section {
+  position: relative;
+
+  width: 100%;
+  height: 100dvh;
+
+  min-height: 100dvh;
+
+  overflow: hidden;
+
+  background: #0d0c0b;
+
+  color: #f5efe6;
+
+  isolation: isolate;
+}
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.object-background {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  overflow: hidden;
+
+  background: #0d0c0b;
+}
+
+.object-background img {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  opacity: 0.48;
+
+  filter: saturate(0.55) contrast(1.05);
+
+  transform: scale(1.04);
+
+  user-select: none;
+
+  -webkit-user-drag: none;
+}
+
+/* =========================================
+   DARK OVERLAY
+========================================= */
+
+.object-darkness {
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(
+    circle at 50% 48%,
+    transparent 0%,
+    rgba(13, 12, 11, 0.2) 35%,
+    rgba(13, 12, 11, 0.78) 100%
+  );
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+/* =========================================
+   ATMOSPHERIC GLOW
+========================================= */
+
+.object-glow {
+  position: absolute;
+
+  left: 50%;
+  top: 48%;
+
+  width: min(55vw, 800px);
+  height: min(55vw, 800px);
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(210, 181, 132, 0.22) 0%,
+    rgba(210, 181, 132, 0.08) 30%,
+    transparent 70%
+  );
+
+  filter: blur(30px);
+
+  opacity: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  will-change: transform, opacity;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.object-header {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  padding: 28px 32px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  z-index: 20;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 2.37rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.17em;
+
+  text-transform: uppercase;
+
+  color: rgba(245, 239, 230, 0.65);
+}
+
+/* =========================================
+   EDITORIAL COPY
+========================================= */
+
+.object-copy {
+  position: absolute;
+
+  left: 7vw;
+
+  top: 50%;
+
+  width: min(730px, 35vw);
+
+  transform: translateY(-50%);
+
+  z-index: 15;
+}
+
+.object-eyebrow {
+  display: block;
+  margin-bottom: 24px;
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: rgba(245, 239, 230, 0.55);
+}
+
+.object-title {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1rem, 5vw, 6rem);
+  font-weight: 300;
+  line-height: 0.84;
+  letter-spacing: -0.055em;
+  color: #f5efe6;
+}
+
+.object-title em {
+  font-style: italic;
+
+  font-weight: 300;
+
+  color: #d4b07a;
+}
+
+.object-description {
+  width: 80%;
+
+  margin: 36px 0 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 1rem;
+
+  line-height: 1.75;
+
+  font-weight: 400;
+
+  color: rgba(245, 239, 230, 0.52);
+}
+
+/* =========================================
+   BOTTLE AREA
+========================================= */
+
+.object-bottle-area {
+  position: absolute;
+
+  left: 50%;
+
+  top: 50%;
+
+  width: 48vw;
+
+  height: 85vh;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 10;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+/* =========================================
+   BOTTLE
+========================================= */
+
+.object-bottle {
+  position: relative;
+
+  width: auto;
+
+  height: 76vh;
+
+  max-width: 38vw;
+
+  object-fit: contain;
+
+  opacity: 0;
+
+  transform-origin: center bottom;
+
+  filter: drop-shadow(0 45px 60px rgba(0, 0, 0, 0.5));
+
+  will-change: transform, opacity;
+
+  user-select: none;
+
+  -webkit-user-drag: none;
+}
+
+/* =========================================
+   SHADOW
+========================================= */
+
+.object-shadow {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 5%;
+
+  width: 240px;
+
+  height: 28px;
+
+  transform: translateX(-50%) scaleX(0.4);
+
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  filter: blur(18px);
+
+  opacity: 0;
+
+  will-change: transform, opacity;
+}
+
+/* =========================================
+   PRODUCT INFO
+========================================= */
+
+.object-product {
+  position: absolute;
+
+  right: 6vw;
+
+  bottom: 10vh;
+
+  z-index: 20;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 8px;
+
+  text-align: right;
+}
+
+.object-number {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2rem;
+
+  font-weight: 300;
+
+  letter-spacing: 0.02em;
+
+  color: #f5efe6;
+}
+
+.object-name {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.8rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+
+  color: rgba(245, 239, 230, 0.45);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .object-header {
+    padding: 20px;
+
+    font-size: 8px;
+  }
+
+  .object-copy {
+    left: 24px;
+
+    top: 15%;
+
+    width: calc(100% - 48px);
+
+    transform: none;
+  }
+
+  .object-eyebrow {
+    margin-bottom: 15px;
+  }
+
+  .object-title {
+    font-size: clamp(3.5rem, 15vw, 5rem);
+  }
+
+  .object-description {
+    margin-top: 22px;
+
+    width: 230px;
+
+    font-size: 10px;
+  }
+
+  .object-bottle-area {
+    left: 50%;
+
+    top: 58%;
+
+    width: 100vw;
+
+    height: 65vh;
+  }
+
+  .object-bottle {
+    height: 55vh;
+
+    max-width: 80vw;
+  }
+
+  .object-shadow {
+    bottom: 5%;
+
+    width: 180px;
+  }
+
+  .object-product {
+    right: 24px;
+
+    bottom: 90px;
+  }
+
+  .object-number {
+    font-size: 20px;
+  }
+
+  .object-name {
+    font-size: 7px;
+  }
+
+  .object-footer {
+    left: 20px;
+
+    right: 20px;
+
+    bottom: 20px;
+  }
+}
