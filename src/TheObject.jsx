@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import "./css/TheObject.css";
 
-import bottle from "./assets/object-bottle.png";
+import bottle from "./assets/poster_12.png";
 import objectBg from "./assets/object-bg.jpg";
 
 gsap.registerPlugin(ScrollTrigger);

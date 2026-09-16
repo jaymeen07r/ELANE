@@ -1,9 +1,9 @@
 import "./css/Collections.css";
 
-import eclat from "./assets/eclat.jpg";
-import noir from "./assets/noir.jpg";
-import ether from "./assets/ether.jpg";
-import sillage from "./assets/sillage.jpg";
+import eclat from "./assets/poster_2.png";
+import noir from "./assets/poster_3.png";
+import ether from "./assets/poster_4.jpg";
+import sillage from "./assets/poster_5.png";
 
 const collections = [
     {

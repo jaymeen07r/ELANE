@@ -1,5 +1,5 @@
 import "./css/Info.css";
-import perfume from "./assets/perfume2.png";
+import perfume from "./assets/poster_1.png";
 
 export default function Info() {
     return (

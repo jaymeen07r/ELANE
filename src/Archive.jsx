@@ -4,10 +4,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import "./css/Archive.css";
 
-import archive01 from "./assets/noir.jpg";
-import archive02 from "./assets/no2.png";
-import archive03 from "./assets/vanilla.jpg";
-import archive04 from "./assets/sillage.jpg";
+import archive01 from "./assets/poster_3.png";
+import archive02 from "./assets/poster_11.png";
+import archive03 from "./assets/poster_12.png";
+import archive04 from "./assets/poster_5.png";
 
 gsap.registerPlugin(ScrollTrigger);
 

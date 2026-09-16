@@ -4,10 +4,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import "./css/TheCraft.css";
 
-import craft01 from "./assets/craft-01.jpg";
-import craft02 from "./assets/craft-02.jpg";
-import craft03 from "./assets/craft-03.jpg";
-import craft04 from "./assets/craft-04.jpg";
+import craft01 from "./assets/poster_7.jpg";
+import craft02 from "./assets/poster_8.jpg";
+import craft03 from "./assets/poster_9.jpg";
+import craft04 from "./assets/poster_10.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 

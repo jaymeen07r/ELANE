@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import "./css/Atmosphere.css";
 
-import atmosphere from "./assets/atmosphere.png";
+import atmosphere from "./assets/poster_6.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
